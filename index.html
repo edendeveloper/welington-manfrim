@@ -6,19 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Welington Manfrim</title>
+  <script defer src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
 </head>
 <body>
   
-  <div class="welcome section fadeIn">
+  <section class="welcome section">
 
-    <div class="welcomeImg fadeIn">
+    <div class="welcomeImg">
       <img src="./assets/profile.jpg" alt="Profile Image">
     </div>  
 
     <div class="welcomeText slideLeft">
       <div class="welcomeBorder">
-        <h1 class="slideLeft">Hello, I'm <span>Welington Manfrim</span>.</h1>
-        <p class="slideLeft">Welcome to my portfolio, thank you for visiting here. </br> I'm a IT student in Brazil, also i wanna be a front-end developer, to reach that goal, i'm studing a lot of front-end technologies. </br> Wanna know more about me? Scroll down!</p>
+        <div>
+          <h1 class="slideLeft title">Hello, I'm <span>Welington Manfrim</span>.</h1>
+          <p class="slideLeft">Welcome to my portfolio, thank you for visiting here. </br> I'm a IT student in Brazil, also i wanna be a front-end developer, to reach that goal, i'm studing a lot of front-end technologies. </br> Wanna know more about me? Scroll down!</p>
+        </div>
         <div class="socialMedia slideLeft">
           <a href="https://github.com/edendeveloper" target="_blank"><button><img src="./assets/github.svg"alt="Github"></button></a>
           <a href="https://www.linkedin.com/in/welington-manfrim/" target="_blank"><button><img src="./assets/linkedin.svg" alt="Linkedin"></button></a>
@@ -27,9 +31,144 @@
       </div>
     </div>
 
-  </div>
-  
-  <img src="./assets/wave.svg" alt="">
+  </section>
 
+  <section class="skills section">
+
+    <div class="skillsList hidden">
+      <h1 class="title">My skills</h1>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>ReactNative</li>
+        <li>Node</li>
+      </ul>
+    </div>
+
+    <svg class="blob-motion hidden" id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g transform="translate(446.2081590938843 246.99164426734941)"><path id="blob1" d="M152.8 -145.8C194.8 -110.8 223.4 -55.4 226.1 2.7C228.8 60.8 205.6 121.6 163.6 166.6C121.6 211.6 60.8 240.8 -0.8 241.6C-62.5 242.5 -124.9 214.9 -147.4 169.9C-169.9 124.9 -152.5 62.5 -149.2 3.3C-145.9 -55.9 -156.7 -111.7 -134.2 -146.7C-111.7 -181.7 -55.9 -195.9 -0.2 -195.6C55.4 -195.4 110.8 -180.8 152.8 -145.8" fill="#3b82f6"></path></g>
+    <g transform="translate(459.9695820970764 253.76439040163072)"><path id="blob2" style="visibility: hidden;" d="M167.6 -151.9C207.9 -127.3 225 -63.6 209.2 -15.8C193.4 32.1 144.8 64.1 104.4 104.6C64.1 145.1 32.1 194.1 -3.4 197.5C-38.9 200.9 -77.8 158.8 -112.6 118.3C-147.4 77.8 -178.2 38.9 -174.7 3.5C-171.2 -31.8 -133.3 -63.6 -98.5 -88.3C-63.6 -113 -31.8 -130.5 15.9 -146.4C63.6 -162.3 127.3 -176.6 167.6 -151.9" fill="#3b82f6"></path></g>
+    </svg>
+    
+    <script>
+      const tween = KUTE.fromTo (
+        '#blob1',
+        {path: '#blob1'},
+        {path: '#blob2'},
+        {repeat: 999, duration: 2000, yoyo: true}
+      )
+        
+      tween.start()
+    </script>
+
+    <div class="tools">
+      <h1 class="title">I also use some tools...</h1>
+      <ul>
+        <li>Git and GitHub</li>
+        <li>VS Code</li>
+        <li>Figma</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section class="experience section">
+
+    <span class="title">Experiences</span>
+    <div class="experienceList hidden">
+      <div class="experienceCard">
+        <div class="experienceBorder">
+          <h1 class="title">Web developer</h1>
+          <h2><a href="https://www.risistemas.com.br" target="_blank">RI Sistemas</a> - 2020</h2>
+          <ul>
+            <li>- HTML, CSS, JavaScript</li>
+            <li>- Vue.js</li>
+            <li>- Scrum method</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experienceCard hidden">
+        <div class="experienceBorder">
+          <h1 class="title">Fullstack developer</h1>
+          <h2><a href="https://www.linkedin.com/company/fiberwork/about/" target="_blank">Fiberwork</a> - 2021</h2>
+          <ul>
+            <li>- HTML, CSS, JavaScript</li>
+            <li>- React</li>
+            <li>- Node</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <span class="title">Formations</span>
+    <div class="experienceList hidden ">
+      <div class="experienceCard">
+        <div class="experienceBorder">
+          <h1 class="title">Systems Development</h1>
+          <h2><a href="http://www.etecpa.com.br" target="_blank">ETEC</a> - 2018/2019</h2>
+          <ul>
+            <li>- HTML and CSS Basics</li>
+            <li>- Database Basics</li>
+            <li>- Programming Basics</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experienceCard hidden">
+        <div class="experienceBorder">
+          <h1 class="title">Analysis and Systems Development</h1>
+          <h2><a href="https://www.cruzeirodosul.edu.br" target="_blank">Cruzeiro do Sul</a> - 2022/Present</h2>
+          <ul>
+            <li>- Web Development</li>
+            <li>- OO Programming</li>
+            <li>- Computer Network</li>
+          </ul>
+        </div>
+      </div>
+
+      <span><a href="">See my full resume here.</a></span>
+    </div>
+  </section>
+
+  <section class="projects section">
+      <ul class="projectsList">
+        <li class="projectsCard">
+          <div class="projectsBorder">
+            <h1>NLW SETUP</h1>
+            <p>Habits Monitor</p>
+            <a href="">Github</a>
+            <a href="">website</a>
+          </div>
+        </li>
+        <li class="projectsCard">
+          <div class="projectsBorder">
+            <h1>Pokédex</h1>
+            <p>Pokédex Clone</p>
+            <a href="">Github</a>
+            <a href="">website</a>
+          </div>
+        </li>
+        <li class="projectsCard">
+          <div class="projectsBorder">
+            <h1>NLW Copa</h1>
+            <p>Polls for FIFA World Cup</p>
+            <a href="">Github</a>
+            <a href="">website</a>
+          </div>
+        </li>
+        <li class="projectsCard">
+          <div class="projectsBorder">
+            <h1>Welington Manfrim</h1>
+            <p>My Portfolio</p>
+            <a href="">Github</a>
+            <a href="">website</a>
+          </div>
+        </li>
+      </ul>
+  </section>
+  
 </body>
 </html>

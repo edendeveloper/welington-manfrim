@@ -20,6 +20,7 @@
 body {
   background-color: var(--white);
   font-family: var(--poppins);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,10 +29,24 @@ body {
   overflow-x: hidden;
 }
 
-.section {
-  height: 100vh;
-  width: 100vw;
+.title {
+  font-family: var(--inter);
+  font-size: 30px;
 }
+
+h2 {
+  font-family: var(--inter);
+  font-size: 25px;
+}
+
+
+section {
+  min-height: 100vh;
+  min-width: 100vw;
+  animation: fadeIn 1s;
+}
+
+/* Welcome Section */
 
 .welcome {
   display: flex;
@@ -58,7 +73,8 @@ body {
 }
 
 .welcomeText {
-  height: 500px;
+  margin-top: 20px;
+  max-height: 500px;
   max-width: 400px;
   background-color: var(--blue);
   border-radius: 8px;
@@ -67,6 +83,9 @@ body {
 }
 
 .welcomeBorder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   border: 2px solid var(--black);
@@ -75,25 +94,14 @@ body {
   padding: 10px;
 }
 
-.welcomeBorder h1 {
-  font-family: var(--inter);
-  font-size: 22pt;
-}
 
 .welcomeBorder h1 span {
   color: var(--black);
 }
 
 .welcomeBorder p {
-  margin-top: 10px;
-  font-size: 16pt;
-}
-
-.socialMedia {
-  position: absolute;
-  bottom: 0;
-  left: 10;
-  margin-bottom: 10px;
+  margin: 10px 0px;
+  font-size: 16px;
 }
 
 .socialMedia a{
@@ -109,6 +117,155 @@ body {
 .socialMedia a button:hover{
   transform: translateY(-5px);
   cursor: pointer;
+}
+
+/* Skills Section */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/wave.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.skillsList {
+  position: absolute;
+  z-index: 1;
+}
+
+.blob-motion {
+  position: absolute;
+  z-index: 0;
+}
+
+.tools {
+  z-index: 1;
+  transform: translateX(300px);
+  color: var(--black);
+}
+
+/* Experience Section */
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/blob-scene-haikei.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.experience span {
+  margin: 10px;
+}
+
+.experience span a {
+  text-decoration: none;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.experience span a:hover {
+  text-decoration: none;
+  color: var(--lightBlue);
+}
+
+.experienceList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  padding: 20px;
+}
+
+.experienceCard {
+  background-color: var(--blue);
+  border-radius: 8px;
+  max-width: 300px;
+  box-shadow: var(--shadow);
+}
+
+.experienceBorder {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--white);
+  border-radius: 8px;
+  transform: translateX(10px) translateY(10px);
+  padding: 10px;
+}
+
+.experienceBorder h2 {
+  font-size: 20px;
+}
+
+.experienceBorder ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+.experienceBorder a {
+  text-decoration: none;
+  color: var(--black);
+  transition: 0.3s;
+}
+
+.experienceBorder h2 a:hover {
+  color: var(--lightBlue);
+}
+
+/* Projetcs Section */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectsList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  color: var(--black);
+  padding-top: 80px;
+}
+
+
+.projectsCard {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  box-shadow: var(--shadow);
+}
+
+.projectsBorder {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  transform: translateX(10px) translateY(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.projectsBorder a {
+  text-decoration: none;
+  color: var(--black);
+  transition: 0.3s;
+}
+
+.projectsBorder a:hover {
+  color: var(--lightBlue)
 }
 
 
@@ -130,6 +287,23 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s;
+  transform: translateX(-100%);
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .slideLeft {
