@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@500&display=swap');
 
 * {
   margin: 0;
@@ -12,19 +12,25 @@
   --lightBlue: #93c5fd;
   --black: #111827;
   --inter: 'Inter', sans-serif;
-  --roboto: 'Roboto Mono', monospace;
+  --poppins: 'Poppins', sans-serif;
   --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
 body {
   background-color: var(--white);
-  font-family: var(--roboto);
+  font-family: var(--poppins);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
 }
 
 .welcome {
@@ -32,20 +38,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80vw;
+  background-image: url(./assets/layered-waves-haikei.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .welcomeImg {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .welcomeImg img{
   border-radius: 50%;
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 80%;
+  max-height: 80%;
   box-shadow: var(--shadow);
 }
 
@@ -102,6 +110,7 @@ body {
   transform: translateY(-5px);
   cursor: pointer;
 }
+
 
 
 @keyframes slideLeft {
