@@ -102,6 +102,7 @@ section {
 }
 
 
+
 .welcomeBorder h1 span {
   color: var(--black);
 }
@@ -126,6 +127,20 @@ section {
 .socialMedia a button:hover{
   transform: translateY(-5px);
   cursor: pointer;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--black);
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: var(--white);
 }
 
 /* Skills Section */
