@@ -202,30 +202,6 @@ section {
   color: var(--lightBlue);
 }
 
-@media only screen and (max-width: 600px) {
-  .experienceList {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 20px;
-  }
-
-  .tools {
-    visibility: hidden;
-  }
-}
-
-@media only screen and (min-width: 800px) {  
-  .experienceList {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 20px;
-  }
-}
-
-
-
 .experienceCard {
   background-color: var(--blue);
   border-radius: 8px;
@@ -271,81 +247,119 @@ section {
   align-items: center;
 }
 
-.project {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  color: var(--black);
-  width: 300px;
-  margin: 20px 0px 20px 0px;
-  padding: 10px;
-  box-shadow: var(--shadow);
-  transform: translateX(-50px);
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+  color: var(--white);
 }
 
-.projectRight {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  color: var(--black);
-  width: 300px;
-  margin: 20px 0px 20px 0px;
-  padding: 10px;
-  box-shadow: var(--shadow);
-  transform: translateX(50px);
+.projectContainer {
+  position: relative;
+  width: 50%;
+  padding: 10px 50px;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
 }
 
-.projectCard {
+.circle {
+  width: 40px;
+  height: 40px;
   background-color: var(--blue);
-  border-radius: 8px;
-  width: 120px;
-  height: 80px;
-  box-shadow: var(--shadow);
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: 32px;
+  z-index: 10;
 }
 
-.projectCardBorder {
-  width: 100%;
-  height: 100%;
+.projectBox {
+  background-color: #3b82f6;
+  border-radius: 8px;
+}
+
+.projectBorder {
+  padding: 20px 30px;
+  position: relative;
   border: 2px solid var(--black);
   border-radius: 8px;
-  padding: 10px;
   transform: translateX(10px) translateY(10px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  font-size: 15px;
 }
 
-.projectName {
-  color: var(--white);
-  font-size: 16px;
-  text-decoration: none;
-  font-family: var(--inter);
-  transition: 0.3s;
-  text-transform: uppercase;
+.leftContainer {
+  left: 0;
 }
 
-.projectName:hover {
+.rightContainer {
+  left: 50%;
+}
+
+.rightContainer .circle{
+  left: -20px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background-color: var(--black);
+  top: 0;
+  left: 50%;
+  margin: 0px -3px 0px -3px;
+  z-index: -1;
+  animation: moveline 5s linear forwards;
+  animation-iteration-count: infinite;
+}
+
+.projectBorder small {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.projectBorder a {
   color: var(--black);
-}
-
-.projectDesc {
-  margin-left: 15px;
-}
-
-.projectDesc span a {
   text-decoration: none;
-  color: var(--black);
   transition: 0.3s;
-  
 }
 
-.projectDesc span a:hover {
+.projectBorder a:hover {
   color: var(--lightBlue);
 }
 
+@keyframes moveline {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
 
+@keyframes movedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.projectContainer:nth-child(2) {
+  animation-delay: 1s;
+}
+.projectContainer:nth-child(3) {
+  animation-delay: 2s;
+}
+.projectContainer:nth-child(4) {
+  animation-delay: 3s;
+}
+.projectContainer:nth-child(5) {
+  animation-delay: 4s;
+}
 
 @keyframes fadeIn {
   0% {
@@ -401,4 +415,56 @@ section {
   animation-name: bounce;
   animation-iteration-count: infinite;
   animation-duration: 4s;
+}
+
+@media only screen and (max-width: 600px) {
+  .experienceList {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+  }
+
+  .tools {
+    visibility: hidden;
+  }
+
+  .timeline {
+    margin: 50px auto; 
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .projectContainer {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+
+  .projectBorder {
+    font-size: 13px;
+  }
+
+  .projectBorder small {
+    margin-bottom: 10px;
+  }
+
+  .rightContainer {
+    left: 0;
+  }
+
+  .leftContainer .circle, .rightContainer .circle {
+    left: 10px;
+  }
+}
+
+@media only screen and (min-width: 800px) {  
+  .experienceList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 20px;
+  }
 }
