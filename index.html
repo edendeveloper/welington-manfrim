@@ -11,29 +11,34 @@
 </head>
 <body>
   
-  <section class="welcome section">
+  <section class="welcome">
 
-    <div class="welcomeImg">
-      <img src="./assets/profile.jpg" alt="Profile Image">
-    </div>  
+    <div class="welcomeContent bounce">
 
-    <div class="welcomeText slideLeft">
-      <div class="welcomeBorder">
-        <div>
-          <h1 class="slideLeft title">Hello, I'm <span>Welington Manfrim</span>.</h1>
-          <p class="slideLeft">Welcome to my portfolio, thank you for visiting here. </br> I'm a IT student in Brazil, also i wanna be a front-end developer, to reach that goal, i'm studing a lot of front-end technologies. </br> Wanna know more about me? Scroll down!</p>
-        </div>
-        <div class="socialMedia slideLeft">
-          <a href="https://github.com/edendeveloper" target="_blank"><button><img src="./assets/github.svg"alt="Github"></button></a>
-          <a href="https://www.linkedin.com/in/welington-manfrim/" target="_blank"><button><img src="./assets/linkedin.svg" alt="Linkedin"></button></a>
-          <a href="https://twitter.com/edend3v" target="_blank"><button><img src="./assets/twitter.svg" alt="Twitter"></button></a>
+      <div class="welcomeImg fadeIn">
+        <img src="./assets/profile.jpg" alt="Profile Image">
+      </div>  
+  
+      <div class="welcomeText">
+        <div class="welcomeBorder">
+          <div>
+            <h1 class="hidden title">Hello, I'm <span>Welington Manfrim</span>.</h1>
+            <p class="hiddenLeft text">Welcome to my portfolio, thank you for visiting here. </br> I'm a IT student in Brazil, also i wanna be a front-end developer, to reach that goal, i'm studing a lot of front-end technologies. </br> Wanna know more about me? Scroll down!</p>
+          </div>
+          <div class="socialMedia hidden">
+            <a href="https://github.com/edendeveloper" target="_blank"><button><img src="./assets/github.svg"alt="Github"></button></a>
+            <a href="https://www.linkedin.com/in/welington-manfrim/" target="_blank"><button><img src="./assets/linkedin.svg" alt="Linkedin"></button></a>
+            <a href="https://twitter.com/edend3v" target="_blank"><button><img src="./assets/twitter.svg" alt="Twitter"></button></a>
+          </div>
         </div>
       </div>
+
     </div>
 
   </section>
 
-  <section class="skills section">
+
+  <section class="skills">
 
     <div class="skillsList hidden">
       <h1 class="title">My skills</h1>
@@ -73,11 +78,12 @@
 
   </section>
 
-  <section class="experience section">
+  <section class="experience">
 
     <span class="title">Experiences</span>
     <div class="experienceList hidden">
-      <div class="experienceCard">
+
+      <div class="experienceCard bounce">
         <div class="experienceBorder">
           <h1 class="title">Web developer</h1>
           <h2><a href="https://www.risistemas.com.br" target="_blank">RI Sistemas</a> - 2020</h2>
@@ -89,7 +95,7 @@
         </div>
       </div>
 
-      <div class="experienceCard hidden">
+      <div class="experienceCard bounce">
         <div class="experienceBorder">
           <h1 class="title">Fullstack developer</h1>
           <h2><a href="https://www.linkedin.com/company/fiberwork/about/" target="_blank">Fiberwork</a> - 2021</h2>
@@ -104,9 +110,10 @@
     </div>
 
     <span class="title">Formations</span>
-    <div class="experienceList hidden ">
-      <div class="experienceCard">
-        <div class="experienceBorder">
+    <div class="experienceList hiddenLeft">
+
+      <div class="experienceCard bounce">
+        <div class="experienceBorder ">
           <h1 class="title">Systems Development</h1>
           <h2><a href="http://www.etecpa.com.br" target="_blank">ETEC</a> - 2018/2019</h2>
           <ul>
@@ -117,7 +124,7 @@
         </div>
       </div>
 
-      <div class="experienceCard hidden">
+      <div class="experienceCard bounce">
         <div class="experienceBorder">
           <h1 class="title">Analysis and Systems Development</h1>
           <h2><a href="https://www.cruzeirodosul.edu.br" target="_blank">Cruzeiro do Sul</a> - 2022/Present</h2>
@@ -129,45 +136,87 @@
         </div>
       </div>
 
-      <span><a href="">See my full resume here.</a></span>
     </div>
+
+    <span><a href="https://resume.io/r/XZ9hYCfAh" target="_blank">See my full resume here.</a></span>
+
   </section>
 
-  <section class="projects section">
-      <ul class="projectsList">
-        <li class="projectsCard">
-          <div class="projectsBorder">
-            <h1>NLW SETUP</h1>
-            <p>Habits Monitor</p>
-            <a href="">Github</a>
-            <a href="">website</a>
-          </div>
-        </li>
-        <li class="projectsCard">
-          <div class="projectsBorder">
-            <h1>Pokédex</h1>
-            <p>Pokédex Clone</p>
-            <a href="">Github</a>
-            <a href="">website</a>
-          </div>
-        </li>
-        <li class="projectsCard">
-          <div class="projectsBorder">
-            <h1>NLW Copa</h1>
-            <p>Polls for FIFA World Cup</p>
-            <a href="">Github</a>
-            <a href="">website</a>
-          </div>
-        </li>
-        <li class="projectsCard">
-          <div class="projectsBorder">
-            <h1>Welington Manfrim</h1>
-            <p>My Portfolio</p>
-            <a href="">Github</a>
-            <a href="">website</a>
-          </div>
-        </li>
-      </ul>
+  <section class="projects">
+
+    <div class="project">
+      <div class="projectCard hidden">
+        <div class="projectCardBorder">
+          <a class="projectName" href="https://edendeveloper.github.io/nlw-setup/" target="_blank">NLW SETUP</a>
+        </div>
+      </div>
+
+      <div class="projectDesc hiddenLeft">
+        <p>A simple habit tracker.</p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <span>see <a href="https://github.com/edendeveloper/nlw-setup" target="_blank">github</a>.</span>
+      </div>
+    </div>
+
+    <div class="projectRight">
+      <div class="projectCard hidden">
+        <div class="projectCardBorder">
+          <a class="projectName" href="https://edendeveloper.github.io/pokedex/" target="_blank">Pokédex</a>
+        </div>
+      </div>
+
+      <div class="projectDesc hiddenLeft">
+        <p>A simple pokédex clone.</p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <span>see <a href="https://github.com/edendeveloper/pokedex" target="_blank">github</a>.</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="projectCard hidden">
+        <div class="projectCardBorder">
+          <a class="projectName" href="https://edendeveloper.github.io/nlw-setup/" target="_blank">NLW COPA</a>
+        </div>
+      </div>
+
+      <div class="projectDesc hiddenLeft">
+        <p>A sweepstakes app.</p>
+        <ul>
+          <li>React</li>
+          <li>React Native</li>
+          <li>Node</li>
+        </ul>
+        <span>see <a href="https://github.com/edendeveloper/nlw-setup" target="_blank">github</a>.</span>
+      </div>
+    </div>
+
+    <div class="projectRight">
+      <div class="projectCard hidden">
+        <div class="projectCardBorder">
+          <a class="projectName" href="https://edendeveloper.github.io/welington-manfrim/" target="_blank">Portfolio</a>
+        </div>
+      </div>
+
+      <div class="projectDesc hiddenLeft">
+        <p>A sweepstakes app.</p>
+        <ul>
+          <li>React</li>
+          <li>React Native</li>
+          <li>Node</li>
+        </ul>
+        <span>see <a href="https://github.com/edendeveloper/welington-manfrim" target="_blank">github</a>.</span>
+      </div>
+    </div>
+      
+
   </section>
   
 </body>
